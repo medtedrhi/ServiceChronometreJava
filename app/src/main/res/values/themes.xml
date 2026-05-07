@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- Indique la version XML et l'encodage du fichier. -->
+<!-- Contient les styles visuels de l'application. -->
+<resources>
+
+    <!-- Définit un thème compatible avec AppCompatActivity. -->
+    <style name="Theme.ServiceChronometreJava" parent="Theme.AppCompat.Light.NoActionBar" />
+
+</resources>

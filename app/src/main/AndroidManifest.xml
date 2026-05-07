@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- Indique la version XML et l'encodage du manifeste. -->
+<!-- Racine du manifeste Android de l'application. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Autorise l'application à demander l'affichage des notifications sur Android 13 ou plus. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Autorise l'application à utiliser un service au premier plan. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- Autorise le type dataSync du service au premier plan sur Android 14 ou plus. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Déclare les propriétés principales de l'application. -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ServiceChronometreJava">
+
+        <!-- Déclare l'activité principale affichée au lancement. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ServiceChronometreJava">
+
+            <!-- Déclare que cette activité est le point d'entrée de l'application. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Déclare le service de chronomètre comme service non exporté au premier plan. -->
+        <service
+            android:name=".ChronometreService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+    </application>
+
+</manifest>

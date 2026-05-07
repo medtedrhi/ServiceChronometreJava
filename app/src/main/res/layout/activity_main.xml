@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- Indique la version XML et l'encodage du fichier. -->
+<!-- Conteneur principal vertical centré pour l'écran du chronomètre. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Texte qui affiche le temps courant du chronomètre. -->
+    <TextView
+        android:id="@+id/tvTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <!-- Bouton qui démarre le Foreground Service et le Bound Service. -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="DÉMARRER SERVICE" />
+
+    <!-- Bouton qui envoie l'action STOP au service. -->
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ARRÊTER SERVICE" />
+
+</LinearLayout>

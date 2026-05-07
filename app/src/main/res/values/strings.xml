@@ -1,0 +1,3 @@
+<resources> <!-- Contient les textes réutilisables de l'application. -->
+    <string name="app_name">Service Chronomètre</string> <!-- Définit le nom visible de l'application. -->
+</resources>
